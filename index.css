@@ -1,0 +1,237 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right,#9a1d86, #1595be);
+    font-weight: bold;
+    overflow: hidden;
+}
+    
+.player{
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrapper{
+    border: 1px solid transparent;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: #f3ecdc;
+    opacity: 0.85;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+    
+.details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+    
+.track-art {
+    margin: 25px;
+    height: 250px;
+    width: 250px;
+
+    border-left:7px solid#282d35;
+    border-right:7px solid #282d35;
+    border-top: 3px solid #df1b1b; 
+    border-bottom: 10px solid #df1b1b;
+  
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    -moz-box-shadow: 0px 6px 5px black;
+    -webkit-box-shadow: 0px 6px 5px black;
+    box-shadow: 0px 6px 5px black;
+    -moz-border-radius:190px;
+    -webkit-border-radius:190px;
+    border-radius:190px;
+}
+    
+.now-playing {
+    font-size: 1.3rem;
+}
+    
+.track-name {
+    font-size: 2.5rem;
+}
+
+.track-artist {
+    margin: 1rem 0; 
+    font-size: 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 2rem;
+}
+
+.active{
+    color: black;
+}
+    
+.repeat-track,
+.random-track,
+.playpause-track,
+.prev-track,
+.next-track {
+    padding: 25px;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+    
+.repeat-track:hover,
+.random-track:hover,
+.playpause-track:hover,
+.prev-track:hover,
+.next-track:hover {
+    opacity: 1;
+}
+    
+.slider_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+.seek_slider, .volume_slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background:  #282d35;
+    background:linear-gradient(to right, #282d35, #282d35);
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.volume_slider{
+    background:linear-gradient(to right,  #282d35, #df1b1b);
+}
+
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    background: #282d35;
+    border: 4px solid #df1b1b;
+    cursor: grab;
+    border-radius: 50%;
+}
+    
+.seek_slider:hover,
+.volume_slider:hover {
+    opacity: 1;
+}
+    
+.seek_slider {
+    width: 60%;
+}
+    
+.volume_slider {
+    width: 30%;
+}
+    
+.current-time,
+.total-duration {
+    padding: 10px;
+}
+    
+i.fa-volume-down,
+i.fa-volume-up {
+    padding: 10px;
+}
+    
+i,
+i.fa-play-circle,
+i.fa-pause-circle,
+i.fa-step-forward,
+i.fa-step-backward,
+p {
+    cursor: pointer;
+}
+
+.randomActive{
+    color: red;
+}
+
+.rotate {
+    animation: rotation 8s infinite linear;
+}
+
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(359deg);
+        }
+    }
+
+
+#wave{
+    height: 60px;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader .stroke{
+    background: #282d35;
+    height: 120%;
+    width: 10px;
+    border-radius: 50px;
+    margin: 10px 5px 20px;
+    animation: animate 2.3s linear infinite;
+}
+
+    @keyframes animate {
+
+        50% {
+            height: 20%;
+            background: #ff0000;
+        }
+
+        100% {
+            background: #282d35;
+            height: 100%;
+        }
+
+    }
+
+.stroke:nth-child(1){
+    animation-delay: 0s;
+}
+.stroke:nth-child(2){
+    animation-delay: 0.3s;
+}
+.stroke:nth-child(3){
+    animation-delay: 0.6s;
+}
+.stroke:nth-child(4){
+    animation-delay: 0.9s;
+}
+.stroke:nth-child(5){
+    animation-delay: 0.6s;
+}
+.stroke:nth-child(6){
+    animation-delay: 0.3s;
+}
+.stroke:nth-child(7){
+    animation-delay: 0s;
+}
+
+
+
+
